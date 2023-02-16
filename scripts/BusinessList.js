@@ -47,9 +47,9 @@ document
                 const businesses = getBusinesses()
 
                 const foundBusiness = businesses.find(
-                    business => business.companyName.startsWith(keyPressEvent.target.value)
+                    business => business.companyName.includes(keyPressEvent.target.value)
                 )
-
+                //true false 
                 companySearchResultArticle.innerHTML = ` <h2 class="businessName">${foundBusiness.companyName}</h2>
                     <div class="businessAddress">
                         <div>${foundBusiness.addressFullStreet} </div>${foundBusiness.addressCity},${foundBusiness.addressStateCode}
